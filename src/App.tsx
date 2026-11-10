@@ -10,7 +10,7 @@ import { PrivacyPage } from '@/pages/privacy-page'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollManager />
 
       <a
