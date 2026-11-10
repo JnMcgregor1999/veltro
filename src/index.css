@@ -1,0 +1,39 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-brand-navy: #071b44;
+  --color-brand-navy-deep: #06132d;
+  --color-brand-blue: #0c5dcc;
+  --color-brand-sky: #1777e8;
+  --color-brand-yellow: #ffca3a;
+  --color-brand-surface: #f8f9fc;
+  --color-brand-border: #e4eaf3;
+  --color-brand-ink: #101a2f;
+  --color-brand-ice: #a8c9ff;
+  --color-brand-mist: #c9d8ed;
+
+  --font-sans: 'Manrope Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --container-page: 1280px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brand-surface text-brand-ink antialiased;
+    margin: 0;
+    min-width: 320px;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-yellow);
+    color: var(--color-brand-navy);
+  }
+}
