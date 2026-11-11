@@ -64,6 +64,13 @@ export function PrivacyPage() {
             className="font-semibold text-brand-blue underline-offset-4 hover:underline"
           >
             {siteContent.contact.instagramHandle}
+          </a>{' '}
+          or email us at{' '}
+          <a
+            href={siteContent.contact.emailHref}
+            className="font-semibold text-brand-blue underline-offset-4 hover:underline"
+          >
+            {siteContent.contact.emailDisplay}
           </a>
           .
         </p>

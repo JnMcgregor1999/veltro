@@ -1,7 +1,8 @@
-import { Camera } from 'lucide-react'
+import { Mail } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 import { BrandLogo } from '@/components/shared/brand-logo'
+import { InstagramIcon } from '@/components/shared/instagram-icon'
 import type { ContactInfo } from '@/types/content'
 
 interface SiteFooterProps {
@@ -17,7 +18,7 @@ export function SiteFooter({ contact, tagline }: SiteFooterProps) {
     >
       <div className="mx-auto flex max-w-page flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <BrandLogo />
+          <BrandLogo tone="light" className="h-20 w-20" />
           <p className="mt-3 max-w-md text-sm text-slate-400">{tagline}</p>
           <Link
             to="/privacy"
@@ -35,7 +36,15 @@ export function SiteFooter({ contact, tagline }: SiteFooterProps) {
             aria-label="Veltro Appliances on Instagram"
             className="text-slate-300 transition hover:text-brand-yellow"
           >
-            <Camera size={22} aria-hidden="true" />
+            <InstagramIcon size={22} />
+          </a>
+          <a
+            href={contact.emailHref}
+            aria-label={`Email Veltro Appliances at ${contact.emailDisplay}`}
+            title={contact.emailDisplay}
+            className="text-slate-300 transition hover:text-brand-yellow"
+          >
+            <Mail size={22} aria-hidden="true" />
           </a>
           <a
             href={contact.phoneHref}

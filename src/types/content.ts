@@ -24,6 +24,8 @@ export interface ContactInfo {
   readonly whatsappE164: string
   readonly instagramUrl: string
   readonly instagramHandle: string
+  readonly emailDisplay: string
+  readonly emailHref: string
 }
 
 export interface LinkCta {
@@ -38,6 +40,8 @@ export interface HeroContent {
   readonly description: string
   readonly image: string
   readonly imageAlt: string
+  readonly cardImage: string
+  readonly cardImageAlt: string
   readonly primaryCta: LinkCta
   readonly secondaryCta: LinkCta
   readonly badges: readonly string[]

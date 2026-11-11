@@ -1,5 +1,7 @@
-import { Camera, Phone } from 'lucide-react'
+import { Mail, Phone } from 'lucide-react'
 
+import { BrandLogo } from '@/components/shared/brand-logo'
+import { InstagramIcon } from '@/components/shared/instagram-icon'
 import { SectionHeading } from '@/components/shared/section-heading'
 import { BookingForm } from '@/features/booking/components/booking-form'
 import type { BookingGateway } from '@/features/booking/booking.types'
@@ -25,6 +27,7 @@ export function BookingSection({
     >
       <div className="grid gap-12 rounded-[2rem] bg-[#eaf2ff] p-7 sm:p-12 lg:grid-cols-[0.8fr_1fr] lg:p-16">
         <div>
+          <BrandLogo tone="light" className="mb-7 h-16 w-16" />
           <SectionHeading intro={content} />
 
           <div className="mt-8 flex flex-col gap-4 text-sm font-bold text-brand-navy">
@@ -44,9 +47,18 @@ export function BookingSection({
               className="flex items-center gap-3 transition-colors hover:text-brand-blue"
             >
               <span className="grid h-10 w-10 place-items-center rounded-full bg-white text-brand-blue">
-                <Camera size={17} aria-hidden="true" />
+                <InstagramIcon size={17} />
               </span>
               {contact.instagramHandle}
+            </a>
+            <a
+              href={contact.emailHref}
+              className="flex items-center gap-3 transition-colors hover:text-brand-blue"
+            >
+              <span className="grid h-10 w-10 place-items-center rounded-full bg-white text-brand-blue">
+                <Mail size={17} aria-hidden="true" />
+              </span>
+              {contact.emailDisplay}
             </a>
           </div>
         </div>

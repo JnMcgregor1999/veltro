@@ -18,10 +18,10 @@ export function HeroSection({ content }: HeroSectionProps) {
         src={content.image}
         alt=""
         aria-hidden="true"
-        width={1200}
-        height={1511}
+        width={1920}
+        height={1080}
         fetchPriority="high"
-        className="absolute inset-0 h-full w-full object-cover object-[65%_center] opacity-40"
+        className="absolute inset-0 h-full w-full object-cover object-center opacity-40"
       />
       <div className="absolute inset-0 bg-linear-to-r from-brand-navy via-brand-navy/95 via-45% to-brand-navy/20" />
       <div
@@ -75,11 +75,11 @@ export function HeroSection({ content }: HeroSectionProps) {
         <div className="hidden lg:block">
           <div className="ml-auto max-w-[350px] rounded-[2rem] border border-white/20 bg-white/10 p-3 shadow-2xl backdrop-blur-md">
             <img
-              src={content.image}
-              alt={content.imageAlt}
-              width={1200}
-              height={1511}
-              className="aspect-[4/5] w-full rounded-[1.5rem] object-cover object-[52%]"
+              src={content.cardImage}
+              alt={content.cardImageAlt}
+              width={764}
+              height={1024}
+              className="h-auto w-full rounded-[1.5rem]"
             />
             <div className="flex items-center justify-between px-3 py-4">
               <span className="text-sm font-bold">Repair · Sales · Service</span>

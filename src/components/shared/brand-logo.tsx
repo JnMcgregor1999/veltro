@@ -1,25 +1,30 @@
-import { Wrench } from 'lucide-react'
-
 import { cn } from '@/lib/cn'
+
+type BrandLogoTone = 'dark' | 'light'
 
 interface BrandLogoProps {
   className?: string
+  /**
+   * `dark` uses the logo with the navy background for dark/blue surfaces.
+   * `light` uses the logo with the white background for light surfaces.
+   */
+  tone?: BrandLogoTone
 }
 
-export function BrandLogo({ className }: BrandLogoProps) {
+const logoSources: Record<BrandLogoTone, string> = {
+  dark: `${import.meta.env.BASE_URL}images/logo-03.webp`,
+  light: `${import.meta.env.BASE_URL}images/logo-01.webp`,
+}
+
+export function BrandLogo({ className, tone = 'dark' }: BrandLogoProps) {
   return (
-    <span className={cn('flex items-center gap-3', className)}>
-      <span className="grid h-11 w-11 place-items-center rounded-xl bg-brand-yellow text-brand-navy shadow-lg shadow-black/15">
-        <Wrench size={23} strokeWidth={2.5} aria-hidden="true" />
-      </span>
-      <span className="leading-none">
-        <span className="block text-[19px] font-black tracking-[0.18em]">
-          VELTRO
-        </span>
-        <span className="block pt-1 text-[9px] font-bold tracking-[0.24em] text-brand-ice">
-          APPLIANCES
-        </span>
-      </span>
-    </span>
+    <img
+      src={logoSources[tone]}
+      alt="Veltro Appliances"
+      width={512}
+      height={512}
+      decoding="async"
+      className={cn('h-14 w-14 shrink-0 rounded-xl object-cover', className)}
+    />
   )
 }

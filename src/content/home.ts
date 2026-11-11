@@ -2,7 +2,14 @@ import type { HomeContent } from '@/types/content'
 
 import { siteContent } from './site'
 
-const heroImagePath = `${import.meta.env.BASE_URL}images/appliance-repair.webp`
+const imagesPath = `${import.meta.env.BASE_URL}images`
+
+// Wide 16:9 room shot for the full-bleed hero backdrop.
+const heroImagePath = `${imagesPath}/appliance-repair.webp`
+// 3:4 services card for the framed card inside the hero.
+const heroCardImagePath = `${imagesPath}/services.webp`
+// 4:3 landscape for the about section.
+const aboutImagePath = `${imagesPath}/workshop-repair.webp`
 
 export const homeContent = {
   hero: {
@@ -12,7 +19,10 @@ export const homeContent = {
     description:
       'We repair your appliances at home or in our workshop. Professional diagnosis, quality parts, and repairs that last.',
     image: heroImagePath,
-    imageAlt: 'Veltro technician repairing a home appliance',
+    imageAlt: 'Modern laundry room with a washing machine and dryer',
+    cardImage: heroCardImagePath,
+    cardImageAlt:
+      'Veltro Appliances services card: repair, installation, service and sales for washing machines, dryers, dishwashers, ovens, cookers and fridges in Dublin',
     primaryCta: { label: 'Book a repair', href: '/#book' },
     secondaryCta: { label: 'Call now', href: siteContent.contact.phoneHref },
     badges: ['At-home service', 'Workshop repairs', 'Quality parts'],
@@ -25,8 +35,8 @@ export const homeContent = {
     },
     {
       icon: 'clock',
-      title: 'Fast response',
-      description: 'We book when you need us',
+      title: 'Quick appointments',
+      description: 'Reliable to suit your schedule',
     },
     {
       icon: 'wrench',
@@ -45,8 +55,8 @@ export const homeContent = {
     title: 'A trusted technician, when you need one.',
     description:
       'At Veltro Appliances we believe repairs should be easy. We explain the problem, find the best solution, and work with quality parts.',
-    image: heroImagePath,
-    imageAlt: 'Veltro appliance repair service',
+    image: aboutImagePath,
+    imageAlt: 'Veltro technician repairing an appliance in the workshop',
     highlights: [
       {
         title: 'At home',

@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 .playwright-mcp
+.opencode
+.github
 
 # Editor directories and files
 .vscode/*

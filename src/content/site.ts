@@ -9,6 +9,8 @@ export const siteContent = {
     whatsappE164: '+353870032990',
     instagramUrl: 'https://instagram.com/veltro_appliances',
     instagramHandle: '@veltro_appliances',
+    emailDisplay: 'Veltrospa@gmail.com',
+    emailHref: 'mailto:Veltrospa@gmail.com',
   },
   navigation: [
     { label: 'Home', href: '/#home' },

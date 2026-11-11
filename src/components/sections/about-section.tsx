@@ -20,8 +20,8 @@ export function AboutSection({ content }: AboutSectionProps) {
           <img
             src={content.image}
             alt={content.imageAlt}
-            width={1200}
-            height={1511}
+            width={1400}
+            height={1050}
             loading="lazy"
             decoding="async"
             className="relative h-[430px] w-full rounded-[2rem] object-cover object-[60%] shadow-2xl"
