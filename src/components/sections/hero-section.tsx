@@ -77,7 +77,7 @@ export function HeroSection({ content }: HeroSectionProps) {
             <img
               src={content.cardImage}
               alt={content.cardImageAlt}
-              width={764}
+              width={768}
               height={1024}
               className="h-auto w-full rounded-[1.5rem]"
             />

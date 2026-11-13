@@ -16,6 +16,7 @@ export const siteContent = {
     { label: 'Home', href: '/#home' },
     { label: 'Services', href: '/#services' },
     { label: 'About', href: '/#about' },
+    { label: 'Gallery', href: '/#gallery' },
     { label: 'Contact', href: '/#contact' },
   ],
   footer: {

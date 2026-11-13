@@ -78,6 +78,21 @@ export interface BookingContent extends SectionIntro {
   readonly fallbackDescription: string
 }
 
+export interface GalleryItem {
+  readonly id: string
+  readonly title: string
+  readonly description: string
+  readonly video: string
+  readonly poster: string
+  readonly instagramUrl: string
+}
+
+export interface GalleryContent extends SectionIntro {
+  readonly items: readonly GalleryItem[]
+  readonly ctaLabel: string
+  readonly ctaHref: string
+}
+
 export interface FooterContent {
   readonly tagline: string
 }

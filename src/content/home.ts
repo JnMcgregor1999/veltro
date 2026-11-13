@@ -6,8 +6,8 @@ const imagesPath = `${import.meta.env.BASE_URL}images`
 
 // Wide 16:9 room shot for the full-bleed hero backdrop.
 const heroImagePath = `${imagesPath}/appliance-repair.webp`
-// 3:4 services card for the framed card inside the hero.
-const heroCardImagePath = `${imagesPath}/services.webp`
+// 3:4 portrait card for the framed card inside the hero.
+const heroCardImagePath = `${imagesPath}/alberto.webp`
 // 4:3 landscape for the about section.
 const aboutImagePath = `${imagesPath}/workshop-repair.webp`
 
@@ -21,8 +21,7 @@ export const homeContent = {
     image: heroImagePath,
     imageAlt: 'Modern laundry room with a washing machine and dryer',
     cardImage: heroCardImagePath,
-    cardImageAlt:
-      'Veltro Appliances services card: repair, installation, service and sales for washing machines, dryers, dishwashers, ovens, cookers and fridges in Dublin',
+    cardImageAlt: 'Alberto, from the Veltro Appliances repair team in Dublin',
     primaryCta: { label: 'Book a repair', href: '/#book' },
     secondaryCta: { label: 'Call now', href: siteContent.contact.phoneHref },
     badges: ['At-home service', 'Workshop repairs', 'Quality parts'],

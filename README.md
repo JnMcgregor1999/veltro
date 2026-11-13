@@ -75,6 +75,11 @@ All copy lives in `src/content/`. To add a service, edit
 `src/content/services.ts`. To change contact details, edit
 `src/content/site.ts`.
 
+The gallery section reads `src/content/gallery.ts`. Each entry needs a 9:16
+`poster` in `public/images/gallery/` and an `.mp4` in `public/videos/` (clips
+are exported from the shop's Instagram account), plus the original
+`instagramUrl` so visitors can watch it there.
+
 ## Booking flow
 
 The form validates with Zod and builds a `wa.me` link. Nothing is sent

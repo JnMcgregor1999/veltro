@@ -28,6 +28,8 @@ npm run format     # prettier --write .
 
 - `src/content/` holds all copy and contact details. Edit it there, not in JSX;
   `src/types/content.ts` types it and is enforced with `satisfies`.
+- Gallery clips live in `src/content/gallery.ts` with media in `public/videos/`
+  and posters in `public/images/gallery/`. Keep the Instagram link for each clip.
 - Adding a service requires three edits: `src/content/services.ts`, the
   `ServiceIconName` union in `src/types/content.ts`, and the icon map in
   `src/components/shared/service-icon.tsx`.
