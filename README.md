@@ -106,5 +106,5 @@ The site is a single-page app. The repository includes:
 - `vercel.json` with an SPA rewrite for Vercel.
 - `public/_redirects` for Netlify.
 
-Replace the placeholder domain `https://veltroappliances.ie` in `index.html`,
+Replace the placeholder domain `https://veltroappliances.com` in `index.html`,
 `public/robots.txt` and `public/sitemap.xml` before going live.

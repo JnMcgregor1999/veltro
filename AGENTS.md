@@ -10,7 +10,7 @@ variables; the booking form only builds a `wa.me` link.
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173/veltro/ (base is /veltro/, not /)
+npm run dev        # http://localhost:5173/
 npm run test       # vitest run
 npm run test:watch
 npm run lint       # oxlint
@@ -49,9 +49,10 @@ npm run format     # prettier --write .
 
 ## Gotchas
 
-- `base: '/veltro/'` exists for GitHub Pages. Any `public/` asset referenced from TS/TSX
-  must be prefixed with `import.meta.env.BASE_URL` (see `src/content/home.ts`), or it
-  breaks under the subpath.
+- `base: '/'` serves the site from the root of the custom domain
+  (`veltroappliances.com`). Any `public/` asset referenced from TS/TSX must still be
+  prefixed with `import.meta.env.BASE_URL` (see `src/content/home.ts`) so it keeps
+  working if the base path changes again.
 - Deployment is GitHub Pages only: push/merge to `main` runs tests, builds, and deploys.
   `vercel.json` and `public/_redirects` are leftovers. Develop on `dev`, merge to `main`.
 - The phone number and Instagram handle are duplicated in the `index.html` JSON-LD
