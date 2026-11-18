@@ -13,7 +13,9 @@ dist-ssr
 *.local
 .playwright-mcp
 .opencode
-.github
+
+# Build info
+tsconfig.tsbuildinfo
 
 # Editor directories and files
 .vscode/*
