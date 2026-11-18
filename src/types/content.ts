@@ -1,10 +1,5 @@
 export type ServiceIconName =
-  | 'washing-machine'
-  | 'dryer'
-  | 'oven'
-  | 'dishwasher'
-  | 'fridge'
-  | 'cooker'
+  'washing-machine' | 'dryer' | 'oven' | 'dishwasher' | 'fridge' | 'cooker'
 
 export interface Service {
   readonly id: string

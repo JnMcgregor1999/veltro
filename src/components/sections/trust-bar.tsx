@@ -29,16 +29,10 @@ export function TrustBar({ items }: TrustBarProps) {
                   'border-b border-brand-border sm:border-b-0 sm:border-r',
               )}
             >
-              <Icon
-                className="shrink-0 text-brand-blue"
-                size={28}
-                aria-hidden="true"
-              />
+              <Icon className="shrink-0 text-brand-blue" size={28} aria-hidden="true" />
               <div>
                 <p className="font-extrabold">{item.title}</p>
-                <p className="mt-1 text-sm text-slate-500">
-                  {item.description}
-                </p>
+                <p className="mt-1 text-sm text-slate-500">{item.description}</p>
               </div>
             </div>
           )

@@ -15,10 +15,7 @@ interface FieldProps {
 export function Field({ label, htmlFor, error, children }: FieldProps) {
   return (
     <div className="grid gap-2">
-      <label
-        htmlFor={htmlFor}
-        className="text-sm font-bold text-brand-navy"
-      >
+      <label htmlFor={htmlFor} className="text-sm font-bold text-brand-navy">
         {label}
       </label>
       {children}
@@ -36,19 +33,9 @@ export function Input({ className, ...props }: ComponentProps<'input'>) {
 }
 
 export function Select({ className, ...props }: ComponentProps<'select'>) {
-  return (
-    <select
-      className={cn(controlClassName, 'appearance-none', className)}
-      {...props}
-    />
-  )
+  return <select className={cn(controlClassName, 'appearance-none', className)} {...props} />
 }
 
 export function Textarea({ className, ...props }: ComponentProps<'textarea'>) {
-  return (
-    <textarea
-      className={cn(controlClassName, 'resize-none', className)}
-      {...props}
-    />
-  )
+  return <textarea className={cn(controlClassName, 'resize-none', className)} {...props} />
 }

@@ -14,11 +14,7 @@ export const bookingSchema = z.object({
     (value) => (typeof value === 'string' ? value : ''),
     z.string().min(1, 'Please choose an appliance'),
   ),
-  message: z
-    .string()
-    .trim()
-    .max(500, 'Please keep this under 500 characters')
-    .optional(),
+  message: z.string().trim().max(500, 'Please keep this under 500 characters').optional(),
 })
 
 export type BookingInput = z.infer<typeof bookingSchema>

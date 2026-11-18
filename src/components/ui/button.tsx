@@ -5,21 +5,10 @@ import { cn } from '@/lib/cn'
 
 import { buttonVariants } from './button-variants'
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
-  VariantProps<typeof buttonVariants>
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & VariantProps<typeof buttonVariants>
 
-export function Button({
-  className,
-  variant,
-  size,
-  type = 'button',
-  ...props
-}: ButtonProps) {
+export function Button({ className, variant, size, type = 'button', ...props }: ButtonProps) {
   return (
-    <button
-      type={type}
-      className={cn(buttonVariants({ variant, size }), className)}
-      {...props}
-    />
+    <button type={type} className={cn(buttonVariants({ variant, size }), className)} {...props} />
   )
 }

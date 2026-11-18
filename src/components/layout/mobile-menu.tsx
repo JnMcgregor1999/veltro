@@ -42,11 +42,7 @@ export function MobileMenu({ navigation, contact }: MobileMenuProps) {
         aria-controls="mobile-menu"
         aria-label={open ? 'Close menu' : 'Open menu'}
       >
-        {open ? (
-          <X aria-hidden="true" />
-        ) : (
-          <Menu aria-hidden="true" />
-        )}
+        {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
       </button>
 
       {open ? (

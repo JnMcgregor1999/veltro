@@ -10,15 +10,12 @@ export function NotFoundPage() {
       id="main"
       className="flex min-h-[70vh] flex-col items-center justify-center px-5 pt-28 text-center"
     >
-      <p className="text-xs font-black uppercase tracking-[0.2em] text-brand-blue">
-        404
-      </p>
+      <p className="text-xs font-black uppercase tracking-[0.2em] text-brand-blue">404</p>
       <h1 className="mt-4 text-4xl font-black tracking-[-0.035em] text-brand-navy sm:text-5xl">
         Page not found
       </h1>
       <p className="mt-4 max-w-md text-lg leading-8 text-slate-500">
-        The page you are looking for does not exist. Let us get you back to the
-        repair service.
+        The page you are looking for does not exist. Let us get you back to the repair service.
       </p>
       <Link
         to="/"

@@ -8,11 +8,7 @@ interface BookingFallbackProps {
   content: BookingContent
 }
 
-export function BookingFallback({
-  url,
-  contact,
-  content,
-}: BookingFallbackProps) {
+export function BookingFallback({ url, contact, content }: BookingFallbackProps) {
   return (
     <div
       role="status"

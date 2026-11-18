@@ -17,13 +17,7 @@ export function SectionHeading({
   const isDark = tone === 'dark'
 
   return (
-    <div
-      className={cn(
-        'max-w-2xl',
-        align === 'center' && 'mx-auto text-center',
-        className,
-      )}
-    >
+    <div className={cn('max-w-2xl', align === 'center' && 'mx-auto text-center', className)}>
       <p
         className={cn(
           'mb-3 text-xs font-black uppercase tracking-[0.2em]',
@@ -41,12 +35,7 @@ export function SectionHeading({
         {intro.title}
       </h2>
       {intro.description ? (
-        <p
-          className={cn(
-            'mt-5 text-lg leading-8',
-            isDark ? 'text-brand-mist' : 'text-slate-500',
-          )}
-        >
+        <p className={cn('mt-5 text-lg leading-8', isDark ? 'text-brand-mist' : 'text-slate-500')}>
           {intro.description}
         </p>
       ) : null}

@@ -37,19 +37,13 @@ export function HeroSection({ content }: HeroSectionProps) {
           </div>
 
           <h1 className="max-w-3xl text-5xl font-black leading-[0.98] tracking-[-0.04em] sm:text-7xl">
-            {content.title}{' '}
-            <span className="text-brand-yellow">{content.titleHighlight}</span>
+            {content.title} <span className="text-brand-yellow">{content.titleHighlight}</span>
           </h1>
 
-          <p className="mt-7 max-w-xl text-lg leading-8 text-brand-mist">
-            {content.description}
-          </p>
+          <p className="mt-7 max-w-xl text-lg leading-8 text-brand-mist">{content.description}</p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Link
-              to={content.primaryCta.href}
-              className={buttonVariants({ size: 'lg' })}
-            >
+            <Link to={content.primaryCta.href} className={buttonVariants({ size: 'lg' })}>
               {content.primaryCta.label}
               <ArrowRight size={18} aria-hidden="true" />
             </Link>

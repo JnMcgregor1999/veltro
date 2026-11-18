@@ -11,16 +11,9 @@ interface ServicesSectionProps {
   bookHref: string
 }
 
-export function ServicesSection({
-  intro,
-  services,
-  bookHref,
-}: ServicesSectionProps) {
+export function ServicesSection({ intro, services, bookHref }: ServicesSectionProps) {
   return (
-    <section
-      id="services"
-      className="mx-auto max-w-page px-5 py-24 sm:px-8 lg:px-10"
-    >
+    <section id="services" className="mx-auto max-w-page px-5 py-24 sm:px-8 lg:px-10">
       <SectionHeading intro={intro} className="mb-12" />
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -40,12 +33,8 @@ export function ServicesSection({
                 aria-hidden="true"
               />
             </div>
-            <h3 className="text-xl font-extrabold text-brand-navy">
-              {service.name}
-            </h3>
-            <p className="mt-2 text-sm leading-6 text-slate-500">
-              {service.description}
-            </p>
+            <h3 className="text-xl font-extrabold text-brand-navy">{service.name}</h3>
+            <p className="mt-2 text-sm leading-6 text-slate-500">{service.description}</p>
           </Link>
         ))}
       </div>

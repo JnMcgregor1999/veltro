@@ -12,10 +12,7 @@ interface SiteFooterProps {
 
 export function SiteFooter({ contact, tagline }: SiteFooterProps) {
   return (
-    <footer
-      id="contact"
-      className="bg-brand-navy-deep px-5 py-10 text-white sm:px-8 lg:px-10"
-    >
+    <footer id="contact" className="bg-brand-navy-deep px-5 py-10 text-white sm:px-8 lg:px-10">
       <div className="mx-auto flex max-w-page flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <BrandLogo tone="light" className="h-20 w-20" />

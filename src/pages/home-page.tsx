@@ -14,19 +14,13 @@ import { useDocumentTitle } from '@/hooks/use-document-title'
 export function HomePage() {
   useDocumentTitle('Veltro Appliances | Appliance Repair in Dublin')
 
-  const createBookingLink = createWhatsAppGateway(
-    siteContent.contact.whatsappE164,
-  )
+  const createBookingLink = createWhatsAppGateway(siteContent.contact.whatsappE164)
 
   return (
     <main id="main">
       <HeroSection content={homeContent.hero} />
       <TrustBar items={homeContent.trust} />
-      <ServicesSection
-        intro={homeContent.services}
-        services={services}
-        bookHref="/#book"
-      />
+      <ServicesSection intro={homeContent.services} services={services} bookHref="/#book" />
       <AboutSection content={homeContent.about} />
       <GallerySection content={galleryContent} />
       <BookingSection

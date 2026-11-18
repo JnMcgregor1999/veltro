@@ -20,10 +20,7 @@ export default function App() {
         Skip to content
       </a>
 
-      <SiteHeader
-        navigation={siteContent.navigation}
-        contact={siteContent.contact}
-      />
+      <SiteHeader navigation={siteContent.navigation} contact={siteContent.contact} />
 
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -31,10 +28,7 @@ export default function App() {
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
 
-      <SiteFooter
-        contact={siteContent.contact}
-        tagline={siteContent.footer.tagline}
-      />
+      <SiteFooter contact={siteContent.contact} tagline={siteContent.footer.tagline} />
     </BrowserRouter>
   )
 }

@@ -7,10 +7,7 @@ interface AboutSectionProps {
 
 export function AboutSection({ content }: AboutSectionProps) {
   return (
-    <section
-      id="about"
-      className="bg-brand-navy px-5 py-24 text-white sm:px-8 lg:px-10"
-    >
+    <section id="about" className="bg-brand-navy px-5 py-24 text-white sm:px-8 lg:px-10">
       <div className="mx-auto grid max-w-page gap-14 lg:grid-cols-[0.9fr_1fr] lg:items-center">
         <div className="relative">
           <div
@@ -37,12 +34,8 @@ export function AboutSection({ content }: AboutSectionProps) {
                 key={highlight.title}
                 className="rounded-xl border border-white/15 bg-white/5 p-4"
               >
-                <p className="text-2xl font-black text-brand-yellow">
-                  {highlight.title}
-                </p>
-                <p className="mt-1 text-sm text-brand-mist">
-                  {highlight.description}
-                </p>
+                <p className="text-2xl font-black text-brand-yellow">{highlight.title}</p>
+                <p className="mt-1 text-sm text-brand-mist">{highlight.description}</p>
               </div>
             ))}
           </div>

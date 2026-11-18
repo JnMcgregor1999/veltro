@@ -13,10 +13,7 @@ export function buildWhatsAppMessage(input: BookingInput): string {
     .join('\n')
 }
 
-export function buildWhatsAppUrl(
-  input: BookingInput,
-  phoneE164: string,
-): string {
+export function buildWhatsAppUrl(input: BookingInput, phoneE164: string): string {
   const text = encodeURIComponent(buildWhatsAppMessage(input))
   const phone = phoneE164.replace(/\D/g, '')
 

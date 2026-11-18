@@ -17,21 +17,14 @@ interface BookingFormProps {
   createBookingLink: BookingGateway
 }
 
-export function BookingForm({
-  services,
-  contact,
-  content,
-  createBookingLink,
-}: BookingFormProps) {
+export function BookingForm({ services, contact, content, createBookingLink }: BookingFormProps) {
   const [errors, setErrors] = useState<BookingErrors>({})
   const [whatsappUrl, setWhatsappUrl] = useState<string | null>(null)
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
-    const parsed = bookingSchema.safeParse(
-      Object.fromEntries(new FormData(event.currentTarget)),
-    )
+    const parsed = bookingSchema.safeParse(Object.fromEntries(new FormData(event.currentTarget)))
 
     if (!parsed.success) {
       const nextErrors: BookingErrors = {}
@@ -88,11 +81,7 @@ export function BookingForm({
         />
       </Field>
 
-      <Field
-        label="Appliance"
-        htmlFor="service"
-        error={errors.service}
-      >
+      <Field label="Appliance" htmlFor="service" error={errors.service}>
         <Select
           id="service"
           name="service"
@@ -112,11 +101,7 @@ export function BookingForm({
         </Select>
       </Field>
 
-      <Field
-        label="What is the problem?"
-        htmlFor="message"
-        error={errors.message}
-      >
+      <Field label="What is the problem?" htmlFor="message" error={errors.message}>
         <Textarea
           id="message"
           name="message"
@@ -127,12 +112,7 @@ export function BookingForm({
         />
       </Field>
 
-      <Button
-        type="submit"
-        variant="solid"
-        size="form"
-        className="mt-2 w-full"
-      >
+      <Button type="submit" variant="solid" size="form" className="mt-2 w-full">
         Request a visit
         <ArrowRight size={18} aria-hidden="true" />
       </Button>
@@ -149,11 +129,7 @@ export function BookingForm({
       </p>
 
       {whatsappUrl ? (
-        <BookingFallback
-          url={whatsappUrl}
-          contact={contact}
-          content={content}
-        />
+        <BookingFallback url={whatsappUrl} contact={contact} content={content} />
       ) : null}
     </form>
   )

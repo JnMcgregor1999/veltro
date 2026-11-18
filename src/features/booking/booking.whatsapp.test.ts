@@ -1,10 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import {
-  buildWhatsAppMessage,
-  buildWhatsAppUrl,
-  createWhatsAppGateway,
-} from './booking.whatsapp'
+import { buildWhatsAppMessage, buildWhatsAppUrl, createWhatsAppGateway } from './booking.whatsapp'
 
 const input = {
   name: 'Jane Doe',

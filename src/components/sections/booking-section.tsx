@@ -21,10 +21,7 @@ export function BookingSection({
   createBookingLink,
 }: BookingSectionProps) {
   return (
-    <section
-      id="book"
-      className="mx-auto max-w-page px-5 py-24 sm:px-8 lg:px-10"
-    >
+    <section id="book" className="mx-auto max-w-page px-5 py-24 sm:px-8 lg:px-10">
       <div className="grid gap-12 rounded-[2rem] bg-[#eaf2ff] p-7 sm:p-12 lg:grid-cols-[0.8fr_1fr] lg:p-16">
         <div>
           <BrandLogo tone="light" className="mb-7 h-16 w-16" />
