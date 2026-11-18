@@ -1,11 +1,19 @@
 import { SectionHeading } from '@/components/shared/section-heading'
+import { useMediaQuery } from '@/hooks/use-media-query'
 import type { AboutContent } from '@/types/content'
 
 interface AboutSectionProps {
   content: AboutContent
 }
 
+// Tailwind's `lg` breakpoint, where the hero portrait card becomes visible.
+const DESKTOP_QUERY = '(min-width: 64rem)'
+
 export function AboutSection({ content }: AboutSectionProps) {
+  const isDesktop = useMediaQuery(DESKTOP_QUERY)
+  const image = isDesktop ? content.image : content.mobileImage
+  const imageAlt = isDesktop ? content.imageAlt : content.mobileImageAlt
+
   return (
     <section id="about" className="bg-brand-navy px-5 py-24 text-white sm:px-8 lg:px-10">
       <div className="mx-auto grid max-w-page gap-14 lg:grid-cols-[0.9fr_1fr] lg:items-center">
@@ -15,8 +23,8 @@ export function AboutSection({ content }: AboutSectionProps) {
             aria-hidden="true"
           />
           <img
-            src={content.image}
-            alt={content.imageAlt}
+            src={image}
+            alt={imageAlt}
             width={1400}
             height={1050}
             loading="lazy"

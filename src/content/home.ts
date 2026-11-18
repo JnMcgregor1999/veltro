@@ -10,6 +10,8 @@ const heroImagePath = `${imagesPath}/appliance-repair.webp`
 const heroCardImagePath = `${imagesPath}/alberto.webp`
 // 4:3 landscape for the about section.
 const aboutImagePath = `${imagesPath}/workshop-repair.webp`
+// 3:4 portrait for the about section below `lg`, where the hero card is hidden.
+const aboutMobileImagePath = `${imagesPath}/alberto.webp`
 
 export const homeContent = {
   hero: {
@@ -56,6 +58,8 @@ export const homeContent = {
       'At Veltro Appliances we believe repairs should be easy. We explain the problem, find the best solution, and work with quality parts.',
     image: aboutImagePath,
     imageAlt: 'Veltro technician repairing an appliance in the workshop',
+    mobileImage: aboutMobileImagePath,
+    mobileImageAlt: 'Alberto, from the Veltro Appliances repair team in Dublin',
     highlights: [
       {
         title: 'At home',

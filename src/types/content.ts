@@ -64,6 +64,8 @@ export interface Highlight {
 export interface AboutContent extends SectionIntro {
   readonly image: string
   readonly imageAlt: string
+  readonly mobileImage: string
+  readonly mobileImageAlt: string
   readonly highlights: readonly Highlight[]
 }
 
